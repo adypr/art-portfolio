@@ -1,0 +1,12 @@
+
+<div class="breadcrumbs">
+    <div class="wrapper breadcrumbs__wrapper">
+        <a href="#" class="breadcrumbs__link">Home</a>
+        <% pages.forEach((page, level) => {
+            if (level === pages.length - 1) { %>
+                <span class="breadcrumbs__current"> | <%= page %></h2>
+            <% } else { %>
+                | <a href="#" class="breadcrumbs__link"> <%= page %></a>
+        <% }})%>
+    </div>
+</div>

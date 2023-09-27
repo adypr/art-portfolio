@@ -1,0 +1,24 @@
+<% let navItems = ['Home', 'About me', 'Blog', 'Contacts']; %>
+
+<header class="header">
+    <div class="wrapper header__container">
+        <div class="header__logo">
+            <h1 class="header__title"><a href="#">ArtYasins</a></h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <% for (let i=0; i < navItems.length; i += 1) { %>
+                    <li class="header__item">
+                        <a href="#" class="header__link"><%= navItems[i] %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </nav>
+        <ul class="header__icons">
+            <li class="header__icon"><a href="#" class="header__favor">F</a></li>
+            <li class="header__icon"><a href="#" class="header__cart">C</a></li>
+            <li class="header__icon"><a href="#" class="header__person">P</a></li>
+        </ul>
+    </div>
+</header>
+<script type="module" src="../../blocks/header/header.js"></script>

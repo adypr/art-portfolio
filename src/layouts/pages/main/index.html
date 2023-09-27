@@ -1,23 +1,30 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app">
-    </div>
-    <div>
-      <h1>Heading 1</h1>
-      <p class="article">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum necessitatibus ratione praesentium reprehenderit labore magni ullam similique quos, exercitationem sequi deleniti ad ab, earum magnam obcaecati totam commodi inventore porro!</p>
-    </div>
-    <div class="random"></div>
-    <script type="module" src="main.js"></script>
-
+<%- include('layouts/base/head.ejs', {title: 'Main page'});  %>
+  <%- include('layouts/blocks/header/header.ejs'); %>
+  <%- include('layouts/blocks/breadcrumbs/breadcrumbs.ejs', { pages: ['Gallery', 'Abstract'] }) %>
+  <main class="main">
+    <section class="wrapper main__wrapper">
+      <div class="main__header">
+        <h2 class="main__title">Gallery</h2>
+        <%- include('layouts/blocks/categories/categories.ejs', { categories: ['All', 'Abstract', 'Sea', 'Mountains'] }); %>
+      </div>
+      <ul class="works">
+        <% for (let i = 1; i <= 12; i += 1) { %>
+          <li class="work">
+            <a href="#" class="work__link">
+              <img src="/images/works/thumbnails/<%= i %>.jpg" alt="" class="work__img">
+              <div class="work__description">
+                <h3 class="work__title">Beautiful painting</h3>
+                <p class="work__price">$10000</p>
+              </div>
+            </a>
+          </li>
+        <% } %>
+      </ul>
+    </section>
+  </main>
+  <%- include('layouts/blocks/footer/footer.ejs'); %>
+  
+  <script type="module" src="main.js"></script>
   </body>
 </html>
+    

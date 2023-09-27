@@ -1,0 +1,6 @@
+<ul class="categories">
+    <li class="categories__item"><%= categories[0] %></li>
+    <% categories.slice(1).forEach((category) => { %>
+        <li class="categories__item"><a href="#" class="categories__link"><%= category %></a></li>
+    <% }) %>
+</ul>

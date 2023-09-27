@@ -1,0 +1,43 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+  }
+
+  &__title {
+    padding-top: 20px;
+
+    font-size: 40px;
+    font-family: "Ballet", cursive;
+  }
+
+  &__nav {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__icons {
+  }
+
+  &__icon {
+  }
+
+  &__favor {
+  }
+
+  &__cart {
+  }
+
+  &__person {
+  }
+}
