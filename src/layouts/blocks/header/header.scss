@@ -1,23 +1,28 @@
 .header {
-  &__container {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 63px;
   }
 
   &__logo {
+    padding: 15px 5px;
   }
 
   &__title {
-    padding-top: 20px;
-
     font-size: 40px;
     font-family: "Ballet", cursive;
   }
 
   &__nav {
+    margin-right: auto;
   }
 
   &__list {
+    display: flex;
+
+    gap: 28px;
   }
 
   &__item {
@@ -27,17 +32,62 @@
   }
 
   &__icons {
+    display: flex;
+    gap: 40px;
   }
 
   &__icon {
+    position: relative;
   }
 
-  &__favor {
+  &__badge {
+    &::after {
+      content: "2";
+      position: absolute;
+      top: -10px;
+      right: -19px;
+
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      line-height: 20px;
+
+      text-align: center;
+      color: $color-secondary;
+
+      background-color: $color-accent;
+      border-radius: 50%;
+    }
   }
 
   &__cart {
   }
 
-  &__person {
+  &__favor,
+  &__cart,
+  &__user {
+    display: block;
+
+    .icon:hover {
+      fill: $color-accent;
+
+      transition: $transition;
+    }
   }
+
+  &__favor .icon {
+  }
+
+  &__cart .icon {
+  }
+
+  &__user .icon {
+  }
+}
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
 }

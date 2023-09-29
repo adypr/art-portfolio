@@ -13,8 +13,17 @@ export default {
         outDir: '../dist',
         rollupOptions: {
             input: {
-               main: resolve(__dirname, 'src/layouts/pages/main/index.html')
+                main: resolve(__dirname, 'src/layouts/pages/main/index.html')
             }
         }
-    }
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+            additionalData: `
+                @import "src/layouts/base/_base.scss";
+            `,
+        },
+        },
+    },
 }

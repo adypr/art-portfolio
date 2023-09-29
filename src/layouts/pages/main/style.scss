@@ -1,3 +1,57 @@
-:root {
-  font-family: Poppins, sans-serif;
+.main {
+  margin-bottom: 150px;
+
+  &__wrapper {
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+
+    font-weight: 400;
+    font-size: 68px;
+    line-height: 72px;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 2.04px;
+  }
+}
+.wrapper {
+}
+.works {
+  columns: 3;
+  gap: 50px;
+}
+.work {
+  break-inside: avoid;
+
+  margin-bottom: 30px;
+
+  &__link {
+    display: block;
+
+    &:hover .work__price {
+      color: $color-primary-light;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+  }
+
+  &__price {
+    color: $color-accent;
+
+    transition: $transition;
+  }
 }

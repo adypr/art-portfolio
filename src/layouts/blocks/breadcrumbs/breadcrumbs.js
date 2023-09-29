@@ -1,1 +1,1 @@
-console.log('breadcrumbs')
+import './breadcrumbs.scss';
